@@ -1,0 +1,95 @@
+{% load static %}
+
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <title>Hello, world!</title>
+    <style>
+        html,
+        body {
+            height: 100%;
+        }
+
+        .container-payment,
+        .row-payment,
+        .col-left {
+            height: 100%;
+        }
+
+        .col-right {
+            padding-top: 1em;
+        }
+
+        .brand-name {
+            color: lightblue;
+        }
+
+        #brand-name-charA {
+            color: blueviolet;
+        }
+        #brand-name-charB {
+            color:cornflowerblue;
+        }
+        #brand-name-charC {
+            color:brown;
+        }
+
+        .btn-payment {
+            padding-left: 2em;
+            padding-right: 2em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container-fluid container-payment">
+        <div class="row row-payment">
+            <div class="col-md-4 bg-info col-left text-center">
+                <img src="{% static 'portal/logos/abc-logo.png' %}" alt="ABC Payment Logo"/>
+                <h1 class="brand-name"><span id="brand-name-charA">A</span><span id="brand-name-charB">B</span><span id="brand-name-charC">C</span> Payment</h1>
+            </div>
+            <div class="col-md-8 col-right">
+                <div class="alert alert-info" role="alert">
+                    Please authenticate your Payment by entering the right wallet ID and password.
+                  </div>
+
+                  <form>
+                    <div class="form-group">
+                      <label for="exampleInputEmail1">Your Wallet ID</label>
+                      <input type="text" class="form-control" id="walletId" aria-describedby="idHelp" placeholder="Enter your wallet ID">
+                      <small id="idHelp" class="form-text text-muted">For example: 123-444-001</small>
+                    </div>
+                    <div class="form-group">
+                      <label for="exampleInputPassword1">Password</label>
+                      <input type="password" class="form-control" id="exampleInputPassword1" placeholder="***">
+                    </div>                   
+                    <button type="submit" class="btn btn-warning btn-payment">Pay</button>
+                  </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+        integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+        crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+        integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+        integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
