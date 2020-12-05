@@ -19,5 +19,6 @@ from portal import views as portal_views
 
 urlpatterns = [
     path('', portal_views.index),
+    path('pay', portal_views.pay, name = 'pay'),
     path('admin/', admin.site.urls),
 ]
